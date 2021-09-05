@@ -20,14 +20,14 @@ class GameActivity : AppCompatActivity() {
         binding.lifecycleOwner = this
         binding.viewModel = viewModel
 
-        binding.tvPad00.setOnClickListener { viewModel.clickPad(0, 0) }
-        binding.tvPad01.setOnClickListener { viewModel.clickPad(0, 1) }
-        binding.tvPad02.setOnClickListener { viewModel.clickPad(0, 2) }
-        binding.tvPad10.setOnClickListener { viewModel.clickPad(1, 0) }
-        binding.tvPad11.setOnClickListener { viewModel.clickPad(1, 1) }
-        binding.tvPad12.setOnClickListener { viewModel.clickPad(1, 2) }
-        binding.tvPad20.setOnClickListener { viewModel.clickPad(2, 0) }
-        binding.tvPad21.setOnClickListener { viewModel.clickPad(2, 1) }
-        binding.tvPad22.setOnClickListener { viewModel.clickPad(2, 2) }
+        binding.tvPad00.setOnClickListener { viewModel.onPadClick(0, 0) }
+        binding.tvPad01.setOnClickListener { viewModel.onPadClick(0, 1) }
+        binding.tvPad02.setOnClickListener { viewModel.onPadClick(0, 2) }
+        binding.tvPad10.setOnClickListener { viewModel.onPadClick(1, 0) }
+        binding.tvPad11.setOnClickListener { viewModel.onPadClick(1, 1) }
+        binding.tvPad12.setOnClickListener { viewModel.onPadClick(1, 2) }
+        binding.tvPad20.setOnClickListener { viewModel.onPadClick(2, 0) }
+        binding.tvPad21.setOnClickListener { viewModel.onPadClick(2, 1) }
+        binding.tvPad22.setOnClickListener { viewModel.onPadClick(2, 2) }
     }
 }
