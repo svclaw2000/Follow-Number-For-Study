@@ -14,7 +14,7 @@ class GameViewModel(val game: Game): ViewModel() {
     val score: LiveData<Int> get() = _score
 
     fun onPadClick(row: Int, col: Int) {
-        game.process(row, col)
+        game.onPadClick(row, col)
         _pads.value = game.curPads
         _score.value = game.score
     }

@@ -27,7 +27,7 @@ class Game {
         generateNextPads()
     }
 
-    fun process(row: Int, col: Int) {
+    fun onPadClick(row: Int, col: Int) {
         if (curPads[row][col].num == nextNum) {
             curPads.clear(row, col)
             _score++
