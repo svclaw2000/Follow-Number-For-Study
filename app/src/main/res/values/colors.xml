@@ -7,4 +7,6 @@
     <color name="main_tvStartGame_ripple">#008FFC</color>
     <color name="main_tvStartGame_background">#FFFFFF</color>
     <color name="main_tvStartGame_border">#DBDBDB</color>
+
+    <color name="game_divider_background">#DBDBDB</color>
 </resources>
