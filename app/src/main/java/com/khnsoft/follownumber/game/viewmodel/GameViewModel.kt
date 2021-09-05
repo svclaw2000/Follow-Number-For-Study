@@ -14,4 +14,10 @@ class GameViewModel: ViewModel() {
 
     private val _score = MutableLiveData(game.score)
     val score: LiveData<Int> get() = _score
+
+    fun clickPad(row: Int, col: Int) {
+        game.process(row, col)
+        _pads.value = game.curPads
+        _score.value = game.score
+    }
 }
