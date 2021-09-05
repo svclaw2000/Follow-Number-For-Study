@@ -3,6 +3,12 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools">
 
+    <data>
+        <variable
+            name="viewModel"
+            type="com.khnsoft.follownumber.game.viewmodel.GameViewModel" />
+    </data>
+
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -101,6 +107,7 @@
             android:layout_height="0dp"
             android:gravity="center"
             android:background="@drawable/tv_game_pad"
+            android:text="@{String.valueOf(viewModel.pads.get(0)[0].num)}"
             tools:text="11"
             app:layout_constraintVertical_weight="8"
             app:layout_constraintLeft_toLeftOf="@id/guideLeft"
@@ -114,6 +121,7 @@
             android:layout_height="0dp"
             android:gravity="center"
             android:background="@drawable/tv_game_pad"
+            android:text="@{String.valueOf(viewModel.pads.get(0)[1].num)}"
             tools:text="12"
             app:layout_constraintLeft_toRightOf="@id/tvPad11"
             app:layout_constraintRight_toLeftOf="@id/tvPad13"
@@ -126,6 +134,7 @@
             android:layout_height="0dp"
             android:gravity="center"
             android:background="@drawable/tv_game_pad"
+            android:text="@{String.valueOf(viewModel.pads.get(0)[2].num)}"
             tools:text="13"
             app:layout_constraintLeft_toRightOf="@id/tvPad12"
             app:layout_constraintRight_toRightOf="@id/guideRight"
@@ -138,6 +147,7 @@
             android:layout_height="0dp"
             android:gravity="center"
             android:background="@drawable/tv_game_pad"
+            android:text="@{String.valueOf(viewModel.pads.get(1)[0].num)}"
             tools:text="21"
             app:layout_constraintVertical_weight="8"
             app:layout_constraintLeft_toLeftOf="@id/tvPad11"
@@ -151,6 +161,7 @@
             android:layout_height="0dp"
             android:gravity="center"
             android:background="@drawable/tv_game_pad"
+            android:text="@{String.valueOf(viewModel.pads.get(1)[1].num)}"
             tools:text="22"
             app:layout_constraintLeft_toLeftOf="@id/tvPad12"
             app:layout_constraintRight_toRightOf="@id/tvPad12"
@@ -163,6 +174,7 @@
             android:layout_height="0dp"
             android:gravity="center"
             android:background="@drawable/tv_game_pad"
+            android:text="@{String.valueOf(viewModel.pads.get(1)[2].num)}"
             tools:text="23"
             app:layout_constraintLeft_toLeftOf="@id/tvPad13"
             app:layout_constraintRight_toRightOf="@id/tvPad13"
@@ -174,6 +186,7 @@
             android:layout_width="0dp"
             android:layout_height="0dp"
             android:background="@drawable/tv_game_pad"
+            android:text="@{String.valueOf(viewModel.pads.get(2)[0].num)}"
             android:gravity="center"
             app:layout_constraintVertical_weight="8"
             app:layout_constraintLeft_toLeftOf="@id/tvPad11"
@@ -188,6 +201,7 @@
             android:layout_height="0dp"
             android:gravity="center"
             android:background="@drawable/tv_game_pad"
+            android:text="@{String.valueOf(viewModel.pads.get(2)[1].num)}"
             tools:text="32"
             app:layout_constraintLeft_toLeftOf="@id/tvPad12"
             app:layout_constraintRight_toRightOf="@id/tvPad12"
@@ -200,11 +214,11 @@
             android:layout_height="0dp"
             android:gravity="center"
             android:background="@drawable/tv_game_pad"
+            android:text="@{String.valueOf(viewModel.pads.get(2)[2].num)}"
             tools:text="33"
             app:layout_constraintLeft_toLeftOf="@id/tvPad13"
             app:layout_constraintRight_toRightOf="@id/tvPad13"
             app:layout_constraintTop_toTopOf="@id/tvPad31"
             app:layout_constraintBottom_toBottomOf="@id/tvPad31" />
-
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>

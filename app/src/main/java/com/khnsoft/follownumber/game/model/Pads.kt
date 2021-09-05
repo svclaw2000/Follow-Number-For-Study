@@ -2,7 +2,11 @@ package com.khnsoft.follownumber.game.model
 
 class Pads(startNum: Int) {
     private val pads: MutableList<MutableList<Pad>> =
-        (0..2).map { row -> (0..2).map { col -> Pad(startNum + row * 3 + col) }.toMutableList() }.toMutableList()
+        (0..2).map { row ->
+            (0..2).map { col ->
+                Pad(startNum + row * 3 + col)
+            }.shuffled().toMutableList()
+        }.shuffled().toMutableList()
 
     val size: Int get() = pads.size
 
