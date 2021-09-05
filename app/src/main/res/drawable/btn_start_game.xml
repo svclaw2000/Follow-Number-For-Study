@@ -11,8 +11,8 @@
     <item android:id="@android:id/background">
         <shape android:shape="rectangle">
             <solid android:color="@color/main_tvStartGame_background" />
-            <stroke android:color="@color/main_tvStartGame_border" android:width="1dp" />
-            <corners android:radius="5dp" />
+            <stroke android:color="@color/main_tvStartGame_border" android:width="@dimen/main_tvStartGame_border" />
+            <corners android:radius="@dimen/main_tvStartGame_radius" />
         </shape>
     </item>
 </ripple>

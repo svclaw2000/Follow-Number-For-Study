@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="divider">1dp</dimen>
+
+    <dimen name="main_tvStartGame_radius">5dp</dimen>
+    <dimen name="main_tvStartGame_border">1dp</dimen>
+
+    <dimen name="game_topBar_marginVertical">10dp</dimen>
+    <dimen name="game_pad_border">1dp</dimen>
+    <dimen name="game_ivPause_size">24dp</dimen>
+</resources>
