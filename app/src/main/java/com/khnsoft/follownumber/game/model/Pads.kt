@@ -1,18 +1,13 @@
 package com.khnsoft.follownumber.game.model
 
 class Pads(startNum: Int) {
-    private val pads: MutableList<MutableList<Pad>> =
-        (0..2).map { row ->
-            (0..2).map { col ->
-                Pad(startNum + row * 3 + col)
-            }.shuffled().toMutableList()
-        }.shuffled().toMutableList()
+    private val pads: MutableList<Pad> = (0 until 9).map { Pad(startNum + it) }.shuffled().toMutableList()
 
     val size: Int get() = pads.size
 
-    operator fun get(idx: Int) = pads[idx].toList()
+    operator fun get(idx: Int) = pads.subList(idx*3, (idx+1)*3).toList()
 
     fun clear(row: Int, col: Int) {
-        pads[row][col] = pads[row][col].copy(isVisible = false)
+        pads[row * 3 + col] = pads[row * 3 + col].copy(isVisible = false)
     }
 }

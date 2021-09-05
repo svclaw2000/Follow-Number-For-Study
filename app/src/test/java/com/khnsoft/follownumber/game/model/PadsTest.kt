@@ -27,7 +27,7 @@ class PadsTest {
     @Test
     fun init_startsFromOne_ThreeRowsAndThreeCols() {
         val pads = Pads(1)
-        assertEquals(3, pads.size)
+        assertEquals(9, pads.size)
         for (row in 0..2) {
             assertEquals(3, pads[row].size)
         }
