@@ -11,4 +11,7 @@ class GameViewModel: ViewModel() {
 
     private val _pads = MutableLiveData(game.curPads)
     val pads: LiveData<Pads> get() = _pads
+
+    private val _score = MutableLiveData(game.score)
+    val score: LiveData<Int> get() = _score
 }

@@ -56,6 +56,7 @@
             android:id="@+id/tvScore"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:text="@{String.valueOf(viewModel.score)}"
             tools:text="12"
             app:layout_constraintLeft_toLeftOf="@id/tvScoreText"
             app:layout_constraintRight_toRightOf="@id/tvScoreText"

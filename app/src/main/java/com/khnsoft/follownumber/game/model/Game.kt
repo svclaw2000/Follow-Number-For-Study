@@ -8,6 +8,11 @@ class Game {
     private lateinit var _nextPads: Pads
     val nextPads get() = _nextPads
 
+    private var _score = 0
+    val score get() = _score
+
+    private var nextNum = 1
+
     init {
         generateNextPads()
         assignNextPads()
@@ -20,5 +25,20 @@ class Game {
     private fun assignNextPads() {
         _curPads = _nextPads
         generateNextPads()
+    }
+
+    fun process(row: Int, col: Int) {
+        if (curPads[row][col].num == nextNum++) {
+            curPads.clear(row, col)
+        } else {
+
+        }
+    }
+
+    enum class Status {
+        READY,
+        RUNNING,
+        PAUSE,
+        GAME_OVER
     }
 }
