@@ -9,4 +9,5 @@
     <color name="main_tvStartGame_border">#DBDBDB</color>
 
     <color name="game_divider_background">#DBDBDB</color>
+    <color name="game_pad_border">#DBDBDB</color>
 </resources>
