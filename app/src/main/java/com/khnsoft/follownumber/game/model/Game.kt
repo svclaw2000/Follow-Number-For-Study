@@ -30,6 +30,10 @@ class Game {
     fun process(row: Int, col: Int) {
         if (curPads[row][col].num == nextNum++) {
             curPads.clear(row, col)
+            _score++
+            if (nextNum % 9 == 1) {
+                assignNextPads()
+            }
         } else {
 
         }
