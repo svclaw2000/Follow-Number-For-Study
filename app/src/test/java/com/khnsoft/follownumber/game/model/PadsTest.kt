@@ -6,7 +6,9 @@ import org.junit.Test
 class PadsTest {
     @Test
     fun init_startsFromOne_containsOneToNine() {
-        val pads = Pads(1).pads.flatten()
+        val pads = Pads(1).let {
+            (0..2).flatMap { row -> (0..2).map { col -> it[row][col] } }
+        }
         for (num in 0..9) {
             pads.contains(Pad(num))
         }
@@ -14,7 +16,9 @@ class PadsTest {
 
     @Test
     fun init_startsFromTen_containsTenToEighteen() {
-        val pads = Pads(10).pads.flatten()
+        val pads = Pads(10).let {
+            (0..2).flatMap { row -> (0..2).map { col -> it[row][col] } }
+        }
         for (num in 10..18) {
             pads.contains(Pad(num))
         }
@@ -22,7 +26,7 @@ class PadsTest {
 
     @Test
     fun init_startsFromOne_ThreeRowsAndThreeCols() {
-        val pads = Pads(1).pads
+        val pads = Pads(1)
         assertEquals(3, pads.size)
         for (row in 0..2) {
             assertEquals(3, pads[row].size)
