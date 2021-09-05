@@ -6,9 +6,7 @@ import androidx.lifecycle.ViewModel
 import com.khnsoft.follownumber.game.model.Game
 import com.khnsoft.follownumber.game.model.Pads
 
-class GameViewModel: ViewModel() {
-    private val game = Game()
-
+class GameViewModel(val game: Game): ViewModel() {
     private val _pads = MutableLiveData(game.curPads)
     val pads: LiveData<Pads> get() = _pads
 

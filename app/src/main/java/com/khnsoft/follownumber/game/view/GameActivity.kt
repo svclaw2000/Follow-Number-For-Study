@@ -6,11 +6,13 @@ import androidx.activity.viewModels
 import androidx.databinding.DataBindingUtil
 import com.khnsoft.follownumber.R
 import com.khnsoft.follownumber.databinding.ActivityGameBinding
+import com.khnsoft.follownumber.game.model.Game
 import com.khnsoft.follownumber.game.viewmodel.GameViewModel
+import com.khnsoft.follownumber.game.viewmodel.GameViewModelFactory
 
 class GameActivity : AppCompatActivity() {
     private lateinit var binding: ActivityGameBinding
-    private val viewModel: GameViewModel by viewModels()
+    private val viewModel: GameViewModel by viewModels { GameViewModelFactory(Game()) }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
